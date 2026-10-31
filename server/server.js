@@ -1,0 +1,1 @@
+require('dotenv').config(); const express = require('express'); const app = express(); app.use(express.json()); app.use(express.static('public')); app.get('/api/teste', (req, res) => { res.json({ mensagem: 'AssetFlow está no ar!' }); }); const PORTA = process.env.PORT || 3000; app.listen(PORTA, () => { console.log(`Servidor rodando em http://localhost:${PORTA}`); });
